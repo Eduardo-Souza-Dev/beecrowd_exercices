@@ -11,14 +11,15 @@ const rl = readline.createInterface({
 
 rl.on('line', (N) =>{
     arr.push(parseInt(N))
-    let M = Math.floor((Math.random() * (max - min + 1)) + min)
+    let M = Math.floor((Math.random() * (max - min + 1)) + min);
     let Vi;
     let number_Gloria;
     let M_arr = [];
     console.log(M)
 
-    for(i = 1; i < M_arr.length; i++){
-        M_arr.push(i)
+    for(i = 1; i < M; i++){
+        Vi = Math.floor((Math.random() * (500 - 1 + 1)) + 1);
+        M_arr.push(Vi)
     }
     if(arr.length > 0){
       number_Gloria = arr[0];
