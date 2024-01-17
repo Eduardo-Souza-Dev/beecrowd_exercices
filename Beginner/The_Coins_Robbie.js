@@ -34,5 +34,21 @@ rl.on('line', (N) =>{
 })
 
 function The_Coins_Of_Robbie(N,arr){
-console.log("Aqui o valor do array " + arr)
+console.log("Arr before the slice " + arr)
+let arrJumpN = arr.slice(N)
+console.log("Value off N " + N)
+console.log(arrJumpN)
+let value;
+
+//Vou chamar uma função recursiva para retornar os valores do saldo
+
+
+//Pegando númereos primos
+if(value % 2 == 0 || value % 3 == 0){
+  //Se for divisivel por dois ou por três significa que não é primo
+}else{
+  //Faz o calculo do valor e retorna as conversas exigidas no exercício
+}
+
+
 }
