@@ -33,22 +33,46 @@ rl.on('line', (N) =>{
 
 })
 
-function The_Coins_Of_Robbie(N,arr){
-console.log("Arr before the slice " + arr)
-let arrJumpN = arr.slice(N)
-console.log("Value off N " + N)
-console.log(arrJumpN)
-let value;
+function The_Coins_Of_Robbie(N,arr_coin){
+console.log("Arr before the slice " + arr_coin)
+let arrJumpN = arr_coin.slice(N)
+// console.log("Value off N " + N)
+// console.log(arrJumpN)
+let arrN = [];
 
 //Vou chamar uma função recursiva para retornar os valores do saldo
 
 
-//Pegando númereos primos
-if(value % 2 == 0 || value % 3 == 0){
-  //Se for divisivel por dois ou por três significa que não é primo
-}else{
-  //Faz o calculo do valor e retorna as conversas exigidas no exercício
+function SearchForSalt(arr){
+  let arrPure = arr
+for(let keys of arr){
+  if(arr[keys] != undefined){
+    let arrSaltValue = arr.slice(N);
+    arrN.push(arrSaltValue)
+    // arr.shift();
+    SearchForSalt(arrSaltValue)
+  }else{
+    return null
+  }
+  // console.log("Valor de values " + values)
 }
+
+console.log(arrN)
+
+}
+
+SearchForSalt(arr_coin)
+
+console.log("Valor do array de arrN " + arrN)
+
+// //Pegando númereos primos
+// if(value % 2 == 0 || value % 3 == 0){
+//   //Se for divisivel por dois ou por três significa que não é primo
+// }else{
+//   //Faz o calculo do valor e retorna as conversas exigidas no exercício
+// }
 
 
 }
+
+//AINDA NÃO FOI FEITO O TESTE
