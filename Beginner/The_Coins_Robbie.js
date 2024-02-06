@@ -41,10 +41,11 @@ function SearchForSalt(arr){
   if(arr[Nvalue] != arr[undefined]){
     arrN.push(arr[Nvalue])
     arr = arr.slice(Nvalue)
-    sumValue = arrN.reduce((acumulator, currentValue) => acumulator + currentValue,0,) 
+    sumValue = arrN.reduce((acumulator, currentValue) => acumulator + currentValue,0) 
     return SearchForSalt(arr)
   }else{
     PrimeNumbers(sumValue) 
+    sumValue = 0;
     return arr[undefined];
   }
 
@@ -52,15 +53,9 @@ function SearchForSalt(arr){
 }
 
 function PrimeNumbers(value){
-  arrN = [];
-  if(value % 2 == 0 || value % 3 == 0){
-    //Se for divisivel por dois ou por três significa que não é primo
+  if(value !== 2 && value % 2 == 0){
     console.log("Bad boy! I’ll hit you.")
   }else{
     console.log("You’re a coastal aircraft, Robbie, a large silver aircraft.")
-    //Faz o calculo do valor e retorna as conversas exigidas no exercício
   }
 }
-
-
-//TESTE NÃO PASSOU (WRONG ANSWER (45%)) -- VOU AJUSTAR O CALCULO DE NÚMEROS PRIMOS --
