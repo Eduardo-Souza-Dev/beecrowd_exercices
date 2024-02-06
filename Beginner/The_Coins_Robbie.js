@@ -46,16 +46,26 @@ function SearchForSalt(arr){
   }else{
     PrimeNumbers(sumValue) 
     sumValue = 0;
+    arrN = [];
     return arr[undefined];
   }
 
  
 }
+function BadBoy(){
+  console.log("Bad boy! I’ll hit you.")
+}
+
+function Aircraft(){
+  console.log("You’re a coastal aircraft, Robbie, a large silver aircraft.")
+}
 
 function PrimeNumbers(value){
-  if(value !== 2 && value % 2 == 0){
-    console.log("Bad boy! I’ll hit you.")
+  if(value !== 2 && value % 2 === 0){ 
+    return rl.close(BadBoy());
   }else{
-    console.log("You’re a coastal aircraft, Robbie, a large silver aircraft.")
+    return rl.close(Aircraft());
   }
 }
+
+//RUNTIME: 0.639S, FILE SIZE:1.48KB, ANSWER: WRONG ANSWER (25%)
